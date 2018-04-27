@@ -13,6 +13,7 @@ namespace StosKolejka
             Queue queue = new Queue();
             Stack stack = new Stack();
 
+
           
         }
 
