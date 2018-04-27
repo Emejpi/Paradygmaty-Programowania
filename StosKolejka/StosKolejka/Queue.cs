@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace StosKolejka
 {
-    class StackQueue
+    class Queue
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
