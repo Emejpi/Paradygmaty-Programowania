@@ -6,49 +6,31 @@ using System.Threading.Tasks;
 
 namespace StosKolejka
 {
-    class LinkListQueue
+    class LinkListQueue<T> : LinkList<T>
     {
-        Node front;
-        Node rear;
+        Node<T> bottom;
 
         public LinkListQueue()
         {
-            this.front = this.rear = null;
+            top = this.bottom = null;
         }
 
-        public void Enqueue(int elem)
+        public void Push(T elem)
         {
-            Node newNode = new Node(elem);
+            Node<T> newNode = new Node<T>(elem);
 
-            if (this.rear == null)
+            if (this.bottom == null)
             {
-                this.front = this.rear = newNode;
+                top = bottom = newNode;
             }
             else
             {
-                this.rear.next = newNode;
-                this.rear = newNode;
+                bottom.next = newNode;
+                bottom = newNode;
             }
-            Console.WriteLine("{0} inserted into Queue", elem);
+            //Console.WriteLine("{0} inserted into Queue", elem);
         }
 
-        public void Dequeue()
-        {
-            if (front == null)
-            {
-                Console.WriteLine("The queue is empty.");
-            }
-
-            Node temp = this.front;
-            this.front = this.front.next;
-
-            if (this.front == null)
-            {
-                this.rear = null;
-            }
-
-            Console.WriteLine("Item deleted is {0}", temp.data);
-        }
-
+       
     }
 }

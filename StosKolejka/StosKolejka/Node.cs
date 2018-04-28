@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace StosKolejka
 {
-    public class Node
+    public class Node<T>
     {
-        public int data;
-        public Node next;
+        public T data;
+        public Node<T> next;
 
-        public Node(int d)
+        public Node(T d)
         {
             data = d;
             next = null;
