@@ -33,15 +33,6 @@ namespace StosKolejka
             return true;
         }
 
-        public T Get()
-        {
-            if (top == null)
-            {
-                return default(T);
-            }
-            return top.data;
-        }
-
         public bool IsEmpty()
         {
             return top == null;
