@@ -14,57 +14,35 @@ namespace StosKolejka
             LinkListStack<int> stack = new LinkListStack<int>();
             LinkListQueue<char> queue = new LinkListQueue<char>();
 
-            queue.Push('D');
-            queue.Push('K');
-            queue.Push('U');
-            queue.Push('J');
-            queue.Push('M');
-            queue.Push('Y');
-            queue.Push(' ');
-            queue.Push('A');
-            queue.Push(' ');
-            queue.Push('U');
-            queue.Push('W');
-            queue.Push('A');
-
-            stack.Push(3);
-            stack.Push(6);
-            stack.Push(2);
-            stack.Push(3);
-            stack.Push(3);
+            Console.WriteLine("Stack");
+            stack.Show();
             stack.Push(1);
             stack.Push(2);
+            stack.Push(3);
+            stack.Show();
+            stack.Pop();
+            stack.Show();
+            stack.Clear();
+            stack.Show();
+            Console.WriteLine(stack.Pop());
 
-            Console.Write(queue.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(queue.Pop());
-            Console.Write(stack.Pop());
-            Console.Write(stack.Pop());
+            Console.WriteLine("");
 
-            // Wywo³anie stosu:
+            Console.WriteLine("Queue");
+            queue.Show();
+            queue.Push('A');
+            queue.Push('B');
+            queue.Push('C');
+            queue.Show();
+            queue.Pop();
+            queue.Show();
 
-            // stos.Push(10);
-            // stos.Push(12);
-            // stos.Push(40);
-            // stos.Pop();
-            // stos.Peek();
-            // Console.ReadKey(true);
-
-            // Wywo³anie kolejki:
+            char charContainer;
+            while(queue.Pop(out charContainer))
+            {
+                Console.WriteLine("container: " + charContainer);
+            }
+            queue.Show();
 
             Console.ReadKey(true);
         }

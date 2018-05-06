@@ -12,14 +12,14 @@ namespace StosKolejka
 
         public LinkListQueue()
         {
-            top = this.bottom = null;
+            top = bottom = null;
         }
 
         public void Push(T elem)
         {
             Node<T> newNode = new Node<T>(elem);
 
-            if (this.bottom == null)
+            if (bottom == null)
             {
                 top = bottom = newNode;
             }

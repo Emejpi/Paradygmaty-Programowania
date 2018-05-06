@@ -10,33 +10,66 @@ namespace StosKolejka
     {
         protected Node<T> top;
 
+        public T Get()
+        {
+            if (top == null)
+            {
+                return default(T);
+            }
+            return top.data;
+        }
+
         public T Pop()
         {
             if (top == null)
             {
-                //Console.WriteLine("Stack Underflow. Deletion not possi");
                 return default(T);
             }
-                //Console.WriteLine("Item poped is {0}", top.data);
                 T output = top.data;
                 top = top.next;
                 return output;
         }
 
-        public bool IsEmpty()
+        public bool Pop(out T value)
         {
-            return top != null;
+            if (top == null)
+            {
+                value = default(T);
+                return false;
+            }
+            value = top.data;
+            top = top.next;
+            return true;
         }
 
-        public void Peek()
+        public bool IsEmpty()
+        {
+            return top == null;
+        }
+
+        public void Clear()
+        {
+            while(!IsEmpty())
+            {
+                Pop();
+            }
+        }
+
+        public void Show()
         {
             if (top == null)
             {
                 Console.WriteLine("no data");
                 return;
             }
-
-            Console.WriteLine("{0} is first to go", this.top.data);
+            Console.Write("data: ");
+            Node<T> currentNode = top;
+            while (currentNode != null)
+            {
+                Console.Write(currentNode.data);
+                currentNode = currentNode.next;
+            }
+            Console.WriteLine("");
         }
     }
 }
