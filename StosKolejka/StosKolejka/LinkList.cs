@@ -21,14 +21,14 @@ namespace StosKolejka
                 return output;
         }
 
-        public bool Pop(out T value)
+        public bool Pop(out T valueContainer)
         {
             if (top == null)
             {
-                value = default(T);
+                valueContainer = default(T);
                 return false;
             }
-            value = top.data;
+            valueContainer = top.data;
             top = top.next;
             return true;
         }
