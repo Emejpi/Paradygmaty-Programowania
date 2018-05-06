@@ -24,7 +24,6 @@ namespace StosKolejka
                 newNode.next = top;
             }
             top = newNode;
-            //Console.WriteLine("{0} pushed to stack", value);
         }
     }
 }

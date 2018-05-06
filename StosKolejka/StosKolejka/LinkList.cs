@@ -10,15 +10,6 @@ namespace StosKolejka
     {
         protected Node<T> top;
 
-        public T Get()
-        {
-            if (top == null)
-            {
-                return default(T);
-            }
-            return top.data;
-        }
-
         public T Pop()
         {
             if (top == null)
@@ -40,6 +31,15 @@ namespace StosKolejka
             value = top.data;
             top = top.next;
             return true;
+        }
+
+        public T Get()
+        {
+            if (top == null)
+            {
+                return default(T);
+            }
+            return top.data;
         }
 
         public bool IsEmpty()

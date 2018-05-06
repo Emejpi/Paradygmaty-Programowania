@@ -28,7 +28,6 @@ namespace StosKolejka
                 bottom.next = newNode;
                 bottom = newNode;
             }
-            //Console.WriteLine("{0} inserted into Queue", elem);
         }
 
        
