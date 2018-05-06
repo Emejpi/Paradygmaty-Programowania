@@ -59,7 +59,7 @@ namespace StosKolejka
         {
             if (top == null)
             {
-                Console.WriteLine("no data");
+                Console.WriteLine("data: empty");
                 return;
             }
             Console.Write("data: ");
